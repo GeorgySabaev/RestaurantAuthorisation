@@ -28,7 +28,7 @@ public class JwtUtils {
             token = Jwts.builder()
                     .setId(id)
                     .claim("user_id", user.getId())
-                    .claim("email", user.getEmail())
+                    .claim("role", user.getRole())
                     .setIssuedAt(now)
                     .setNotBefore(now)
                     .setExpiration(exp)
